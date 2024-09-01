@@ -74,6 +74,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(SolutionDir)libs\minhook.x64\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)libs\minhook.x64\lib\debug;$(LibraryPath)</LibraryPath>
+    <IntDir>inter\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)out\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(SolutionDir)libs\minhook.x64\include;$(IncludePath)</IncludePath>
