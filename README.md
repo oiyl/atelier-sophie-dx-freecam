@@ -1,8 +1,6 @@
 # atelier-sophie-mysterious-book-freecam
  atelier sophie: the alchemist of the mysterious book dx freecam written
 
-![Preview](https://i.imgur.com/Q2UUwNR.gif)
-
 # Installation
 1. Download and install Process Hacker or any other dll injector
 2. Download the release binary from [releases](https://github.com/oiyl/atelier_sophie_dx_freecam/releases/) page
