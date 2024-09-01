@@ -10,7 +10,14 @@ auto WINAPI inject ( LPVOID lp_param ) -> DWORD {
 
 	while ( !GetAsyncKeyState ( VK_END ) ) {
 		std::this_thread::sleep_for ( std::chrono::milliseconds ( 100 ) );
+		if (GetAsyncKeyState(VK_F6)) {
+			hooks::unload();
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+
+			hooks::init();
+		}
 	}
+
 
 	FreeLibraryAndExitThread ( mod, 0 );
 }
