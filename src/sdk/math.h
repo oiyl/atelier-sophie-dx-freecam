@@ -1,5 +1,12 @@
 #include <cmath>
 
+struct vec2_t {
+	float x, y;
+
+	vec2_t() : x(0), y(0) { }
+	vec2_t(float x, float y) : x(x), y(y) { }
+};
+
 struct vec3_t {
 	float x, y, z;
 
