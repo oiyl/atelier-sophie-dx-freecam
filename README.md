@@ -17,10 +17,6 @@ Joysticks to move
 
 Y/A for up/down
 
-Keyboard / Mouse: W, A, S, D, Ctrl, Space
-
-Controller: Joysticks
-
 # Libraries
 * [minhook](https://github.com/TsudaKageyu/minhook)
 * XInput
