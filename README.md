@@ -6,6 +6,17 @@
 2. Download the release binary from [releases](https://github.com/oiyl/atelier_sophie_dx_freecam/releases/) page
 3. Inject into the game's process
 
+# Controls
+XBox controller
+`F7` to toggle freecam
+`F6` to restart (may bug out at certain scenes)
+Joysticks to move
+Y/A for up/down
+
+Keyboard / Mouse: W, A, S, D, Ctrl, Space
+
+Controller: Joysticks
+
 # Libraries
 [minhook](https://github.com/TsudaKageyu/minhook)
 
