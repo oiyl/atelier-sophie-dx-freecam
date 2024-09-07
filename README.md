@@ -8,9 +8,13 @@
 
 # Controls
 XBox controller
+
 `F7` to toggle freecam
+
 `F6` to restart (may bug out at certain scenes)
+
 Joysticks to move
+
 Y/A for up/down
 
 Keyboard / Mouse: W, A, S, D, Ctrl, Space
