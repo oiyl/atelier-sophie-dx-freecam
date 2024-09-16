@@ -3,7 +3,7 @@
 #include <iostream>
 #include <thread>
 
-#ifdef DEBUG
+#ifdef _DEBUG
 auto open_console ( ) -> void {
 	AllocConsole ( );
 
@@ -26,7 +26,7 @@ auto close_console ( ) -> void {
 
 auto WINAPI inject ( LPVOID lp_param ) -> DWORD {
 	auto mod = static_cast< HMODULE > ( lp_param );
-#ifdef DEBUG
+#ifdef _DEBUG
 	open_console ( );
 #endif
 	hooks::init ( );
@@ -49,7 +49,7 @@ auto WINAPI inject ( LPVOID lp_param ) -> DWORD {
 
 auto uninject ( ) -> void {
 	hooks::unload ( );
-#ifdef DEBUG
+#ifdef _DEBUG
 	close_console ( );
 #endif
 }
