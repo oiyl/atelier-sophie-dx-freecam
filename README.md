@@ -9,6 +9,10 @@
 # Compilation
 1. Download Visual Studio 2022, open `freecam.sln`, and compile it.
 
+# Features
+Battle freecam
+Field freecam
+
 # Controls
 XBox controller
 
