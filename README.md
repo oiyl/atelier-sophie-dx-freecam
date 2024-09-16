@@ -3,7 +3,7 @@
  
 # Installation
 1. Download and install Process Hacker or any other dll injector
-2. Download the release binary from [releases](https://github.com/oiyl/atelier_sophie_dx_freecam/releases/) page
+2. Compile with with Microsoft Visual Studio
 3. Inject into the game's process
 
 # Controls
@@ -20,7 +20,7 @@ Y/A for up/down
 # Libraries
 * [minhook](https://github.com/TsudaKageyu/minhook)
 * XInput
-* [katy's](https://github.com/djkaty) gamepad library i shamelessly ripped
+* [katy's](https://github.com/djkaty) gamepad library
 
 # License
 The MIT License, available in the [LICENSE](https://github.com/oiyl/atelier_sophie_dx_freecam/blob/main/LICENSE) file
