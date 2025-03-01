@@ -2,4 +2,4 @@
 
 namespace game {
 	inline bool freecam_enabled = false;
-}
+} // namespace game

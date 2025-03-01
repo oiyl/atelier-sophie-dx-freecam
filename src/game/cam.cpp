@@ -8,7 +8,7 @@
 
 float speed = 20;
 
-inline auto g_gamepad = std::make_unique< Gamepad >();
+inline auto g_gamepad = std::make_unique< Gamepad > ( );
 
 auto c_cam::init ( vec3_t& pos, vec3_t& look_at ) const -> void {
 	if ( !is_valid ( ) ) {
@@ -52,43 +52,43 @@ auto c_cam::calc_pos ( ) -> void {
 
 	static bool wasConnected = true;
 
-	if (!g_gamepad->Refresh()) {
-		if (wasConnected) {
+	if ( !g_gamepad->Refresh ( ) ) {
+		if ( wasConnected ) {
 			wasConnected = false;
 		}
 		return;
 	}
 
-	if (!wasConnected) {
+	if ( !wasConnected ) {
 		wasConnected = true;
 	}
 
-	vec2_t left_stick{ g_gamepad->leftStickX , g_gamepad->leftStickY };
+	vec2_t left_stick { g_gamepad->leftStickX, g_gamepad->leftStickY };
 
 	if ( left_stick.y >= 0.1 ) {
 		m_pos += direction * speed * left_stick.y;
 		m_look_at += direction * speed * left_stick.y;
 	}
-	if (left_stick.y < 0) {
+	if ( left_stick.y < 0 ) {
 		m_pos -= direction * speed * -left_stick.y;
 		m_look_at -= direction * speed * -left_stick.y;
 	}
 
-	if (left_stick.x >= 0.1) {
+	if ( left_stick.x >= 0.1 ) {
 		m_pos -= right * speed * -left_stick.x;
 		m_look_at -= right * speed * -left_stick.x;
 	}
-	if (left_stick.x < 0) {
+	if ( left_stick.x < 0 ) {
 		m_pos += right * speed * left_stick.x;
 		m_look_at += right * speed * left_stick.x;
 	}
 
-	if ( g_gamepad->IsPressed(0x1000)) {
+	if ( g_gamepad->IsPressed ( 0x1000 ) ) {
 		m_pos += up * speed;
 		m_look_at += up * speed;
 	}
 
-	if (g_gamepad->IsPressed(0x8000)  ) {
+	if ( g_gamepad->IsPressed ( 0x8000 ) ) {
 		m_pos -= up * speed;
 		m_look_at -= up * speed;
 	}
@@ -109,34 +109,34 @@ auto c_cam::calc_dir ( ) -> void {
 
 	static bool wasConnected = true;
 
-	if (!g_gamepad->Refresh()) {
-		if (wasConnected) {
+	if ( !g_gamepad->Refresh ( ) ) {
+		if ( wasConnected ) {
 			wasConnected = false;
 		}
 		return;
 	}
 
-	if (!wasConnected) {
+	if ( !wasConnected ) {
 		wasConnected = true;
 	}
 
-	vec2_t right_stick{ g_gamepad->rightStickX , g_gamepad->rightStickY };
-	if (right_stick.x >= 0.1) {
+	vec2_t right_stick { g_gamepad->rightStickX, g_gamepad->rightStickY };
+	if ( right_stick.x >= 0.1 ) {
 		yaw -= 0.02f;
-		yaw = std::fmod(yaw, 2.0f * 3.1415f);
+		yaw = std::fmod ( yaw, 2.0f * 3.1415f );
 	}
-	if (right_stick.x < 0 ) {
+	if ( right_stick.x < 0 ) {
 		yaw += 0.02f;
-		yaw = std::fmod(yaw, 2.0f * 3.1415f);
+		yaw = std::fmod ( yaw, 2.0f * 3.1415f );
 	}
 
-	if (right_stick.y >= 0.1) {
+	if ( right_stick.y >= 0.1 ) {
 		pitch -= 0.02f * right_stick.y;
-		pitch = std::clamp(pitch, 0.0f, 3.1415f);
+		pitch = std::clamp ( pitch, 0.0f, 3.1415f );
 	}
-	if (right_stick.y < 0) {
+	if ( right_stick.y < 0 ) {
 		pitch += 0.02f * -right_stick.y;
-		pitch = std::clamp(pitch, 0.0f, 3.1415f);
+		pitch = std::clamp ( pitch, 0.0f, 3.1415f );
 	}
 
 	m_look_at = m_pos + spherical_to_cartesian ( radius, yaw, pitch );
