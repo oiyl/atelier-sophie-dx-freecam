@@ -29,6 +29,8 @@ auto WINAPI inject ( LPVOID lp_param ) -> DWORD {
 #ifdef _DEBUG
 	open_console ( );
 #endif
+
+	hooks::offsets::scan ( );
 	hooks::init ( );
 
 	while ( !GetAsyncKeyState ( VK_END ) ) {

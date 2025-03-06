@@ -18,6 +18,14 @@ FUNCTION_PROTOTYPE ( camera_c_manual, auto( __fastcall ) ( uintptr_t, uintptr_t,
 FUNCTION_PROTOTYPE ( camera_c_preset, auto( __fastcall ) ( uintptr_t, uintptr_t, uintptr_t )->char );
 
 namespace hooks {
+	namespace offsets {
+		bool scan ( );
+
+		inline uintptr_t field;
+		inline uintptr_t manual;
+		inline uintptr_t preset;
+
+	} // namespace offsets
 
 	auto init ( ) -> bool;
 	auto unload ( ) -> void;
