@@ -1,10 +1,10 @@
 # atelier-sophie-dx-freecam
- atelier sophie: the alchemist of the mysterious book dx 1.00 freecam
+ atelier sophie: the alchemist of the mysterious book dx freecam
  
 # Setup
 1. Download and install Process Hacker or any other dll injector
 2. Download the release binary from [releases](https://github.com/oiyl/atelier_sophie_dx_freecam/releases/) page
-3. Inject into the game's process
+3. Inject into the game's process (Process hacker should be in administrator mode)
 
 # Compilation
 1. Download Visual Studio 2022, open `freecam.sln`, and compile it.
